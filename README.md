@@ -23,10 +23,9 @@ The program lets a user publish a pitch
 * Postgres
 
 ## Setup/Installation Requirements
+*Clone this project file using the repository link below
 * https://github.com/FITSTARGILLY2643/Awesome-Pitch
-* download the zip file
-* unzip it on your documents folder
-* open the folder on your preferred text/code editor
+* open the file on your preferred text/code editor
 * code away
 ## Technologies used
 * Python3.8
