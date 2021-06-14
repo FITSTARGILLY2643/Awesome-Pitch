@@ -23,7 +23,7 @@ The program lets a user publish a pitch
 * Postgres
 
 ## Setup/Installation Requirements
-*Clone this project file using the repository link below
+* Clone this project file using the repository link below
 * https://github.com/FITSTARGILLY2643/Awesome-Pitch
 * open the file on your preferred text/code editor
 * code away
