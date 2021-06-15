@@ -23,7 +23,6 @@ class User(UserMixin,db.Model):
     date_joined = db.Column(db.DateTime,default=datetime.utcnow)
 
     pitches = db.relationship('Pitch',backref = 'user',lazy = "dynamic")
-
     comments = db.relationship('Comment',backref = 'user',lazy = "dynamic")
 
     @property
@@ -61,7 +60,6 @@ class Pitch(db.Model):
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
     likes = db.Column(db.Integer)
     dislikes = db.Column(db.Integer)
-
     comments = db.relationship('Comment',backref =  'pitch_id',lazy = "dynamic")
 
     def save_pitch(self):

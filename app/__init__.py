@@ -10,7 +10,6 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 mail = Mail()
 photos = UploadSet('photos',IMAGES)
-
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
 login_manager.login_view = 'auth.login'

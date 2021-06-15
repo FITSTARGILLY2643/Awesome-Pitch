@@ -2,9 +2,9 @@
     {%for pitch in pitches_list%}
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 review-card">
             <div class="well well-lg">
-                <h4>{{pitch.pitch_title}}</h4>
+                <h4 style="color: maroon;">{{pitch.pitch_title}}</h4>
                 <p>{{pitch.pitch_content| truncate(100)}}</p>
-                <p>Written by:  {{pitch.user.username}} <a href="/pitch/{{pitch.id}}" class="btn btn-primary pull-right">Read</a> </p>
+                <p style="color: blue;">Written by:  {{pitch.user.username}} <a href="/pitch/{{pitch.id}}" class="btn btn-info pull-right btn-sm">Read More</a> </p>
             </div>
         </div>
     {%endfor%}
@@ -13,7 +13,7 @@
 {%macro displayComments(comments_list)%}
     {%for comment in comments_list%}
         <div class="col-md-12">
-            <h5>{{comment.user.username}}</h5>
+            <h5 style="color: blue;">{{comment.user.username}}</h5>
             <p>{{comment.comment}}</p>
         </div>
     {%endfor%}

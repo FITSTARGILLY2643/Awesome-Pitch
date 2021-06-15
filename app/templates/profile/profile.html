@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <!-- displaying  Username-->
-        <h3> {{user.username| capitalize}} </h3>
+        <h3 style="color:blue;"> {{user.username| capitalize}} </h3>
         <hr>
         <!--Display profile photo-->
         <div class="col-md-3">
@@ -12,7 +12,7 @@
                 {% if user.profile_pic_path %}
                 <img class="" src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
                 {%else%}
-                <p>No profile picture</p>
+                <p style="color: mediumvioletred;">No profile picture</p>
                 {% endif %}
 
                 {% if user == current_user %}
@@ -31,13 +31,13 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-          <h3> Bio </h3>
+          <h3 style="color: blue;"> Bio </h3>
 
           <!--Displaying user bio-->
           {% if user.bio %}
             <p> {{user.bio}}</p>
           {%else%}
-            <p> {{user.username| capitalize}} has no bio </p>
+            <p style="color: mediumvioletred;"> {{user.username| capitalize}} has no bio </p>
           {% endif %}
 
           {% if user == current_user %}

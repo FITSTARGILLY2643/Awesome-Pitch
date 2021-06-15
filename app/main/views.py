@@ -14,15 +14,15 @@ def index():
     View root page function that returns the index page and its data
     '''
 
-    title = 'Home - Welcome to Perfect Pitch'
+    title = 'Home - Welcome to Awesome Pitch'
 
     # Getting reviews by category
-    interview_piches = Pitch.get_pitches('interview')
-    product_piches = Pitch.get_pitches('product')
-    promotion_pitches = Pitch.get_pitches('promotion')
+    market_pitches = Pitch.get_pitches('market')
+    business_pitches = Pitch.get_pitches('business')
+    sales_pitches = Pitch.get_pitches('sales')
 
 
-    return render_template('index.html',title = title, interview = interview_piches, product = product_piches, promotion = promotion_pitches)
+    return render_template('index.html',title = title, market = market_pitches, business = business_pitches, sales = sales_pitches)
 
 @main.route('/user/<uname>')
 def profile(uname):
@@ -85,26 +85,26 @@ def new_pitch():
     title = 'New pitch'
     return render_template('new_pitch.html',title = title,pitch_form=pitch_form )
 
-@main.route('/pitches/interview_pitches')
-def interview_pitches():
+@main.route('/pitches/market_pitches')
+def market_pitches():
 
-    pitches = Pitch.get_pitches('interview')
+    pitches = Pitch.get_pitches('market')
 
-    return render_template("interview_pitches.html", pitches = pitches)
+    return render_template("market_pitches.html", pitches = pitches)
 
-@main.route('/pitches/product_pitches')
-def product_pitches():
+@main.route('/pitches/business_pitches')
+def business_pitches():
 
-    pitches = Pitch.get_pitches('product')
+    pitches = Pitch.get_pitches('business')
 
-    return render_template("product_pitches.html", pitches = pitches)
+    return render_template("business_pitches.html", pitches = pitches)
 
-@main.route('/pitches/promotion_pitches')
-def promotion_pitches():
+@main.route('/pitches/sales_pitches')
+def sales_pitches():
 
-    pitches = Pitch.get_pitches('promotion')
+    pitches = Pitch.get_pitches('sales')
 
-    return render_template("promotion_pitches.html", pitches = pitches)
+    return render_template("sales_pitches.html", pitches = pitches)
 
 @main.route('/pitch/<int:id>', methods = ['GET','POST'])
 def pitch(id):
