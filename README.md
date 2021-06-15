@@ -15,7 +15,7 @@ The program lets a user publish a pitch
 * Output: Redirects user to a form that helps him/her create a pitch
 
 ## Live Site
-
+https://awesome-pitch.herokuapp.com/
 ## Prerequisites
 * Python
 * Pip
